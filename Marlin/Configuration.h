@@ -40,15 +40,15 @@
 //#define CHANGE_X_DIRECTION        // If your X carriage homes in the wrong direction (it should move right to left) enable this.
 //#define CHANGE_Z_DIRECTION        // If your Z homes in the wrong direction (it should move top to bottom) enable this.
 //#define HOTEND_E3DV6              // Genuine E3D v6 hotend.
-//#define FULL_GRAPHIC_SMART        // Enable this if you have a RepRap Discount Full Graphic Smart Controller (The
+#define FULL_GRAPHIC_SMART        // Enable this if you have a RepRap Discount Full Graphic Smart Controller (The
                                     // stock controller is a RepRap Discount Smart Controller)
-#define NUM_Z_STEPPER_DRIVERS 1    // Change this to 2 if you have dual Z stepper motors with the second stepper motor
+#define NUM_Z_STEPPER_DRIVERS 2    // Change this to 2 if you have dual Z stepper motors with the second stepper motor
                                     // connected to the next available E plug (usually E1)
 
-//#define MOTHERBOARD BOARD_MKS_GEN_13        // Original controller board with built in stepper drivers. Works with MKS BASE 1.3, 1.4
+#define MOTHERBOARD BOARD_MKS_GEN_13        // Original controller board with built in stepper drivers. Works with MKS BASE 1.3, 1.4
 //#define MOTHERBOARD BOARD_MKS_BASE_15       // MKS v1.5 with Allegro A4982 stepper drivers
 //#define MOTHERBOARD BOARD_MKS_BASE_HEROIC   // MKS BASE 1.0 with Heroic HR4982 stepper drivers
-#define MOTHERBOARD BOARD_MKS_GEN_L         // Newer controller board with replacable stepper drivers
+//#define MOTHERBOARD BOARD_MKS_GEN_L         // Newer controller board with replacable stepper drivers
 //#define MOTHERBOARD BOARD_MKS_GEN_L_V2
 
 /**
@@ -839,7 +839,7 @@
 
 #if ENABLED(PIDTEMP)
   //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
